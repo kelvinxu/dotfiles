@@ -1,3 +1,4 @@
+mv ./.vimrc ~
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
@@ -11,4 +12,3 @@ git clone https://github.com/flazz/vim-colorschemes.git ~/.vim/bundle/vim-colors
 git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
 git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
 git clone https://github.com/jeetsukumaran/vim-buffergator.git ~/.vim/bundle/vim-buffergator
-git clone https://github.com/ludovicchabant/vim-gutentags.git ~/.vim/bundle/vim-gutentags
