@@ -28,7 +28,7 @@ set visualbell
 set autochdir
 syntax on
 imap jk <Esc>
-colorscheme molokai
+colorscheme gruvbox
 
 "" NerdTREE
 "autocmd vimenter * NERDTree     " Automatically open NerdTree
@@ -61,6 +61,7 @@ let g:NERDDefaultAlign = 'left'
 let g:NERDAltDelims_java = 1
 
 " for finding files 
+nmap <leader>bf :CtrlP<cr>
 nmap <leader>bb :CtrlPBuffer<cr>
 nmap <leader>bs :CtrlPMRU<cr>
 " run search everything
