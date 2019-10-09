@@ -28,7 +28,8 @@ set visualbell
 set autochdir
 syntax on
 imap jk <Esc>
-colorscheme molokai
+set background=dark
+colorscheme gruvbox
 
 "" NerdTREE
 "autocmd vimenter * NERDTree     " Automatically open NerdTree
@@ -48,7 +49,7 @@ set pastetoggle=<leader>p
 nnoremap <leader>v :vsplit<CR>
 
 " Print ipdb debug line
-noremap <leader>db Oimport pdb; pdb.set_trace();<ESC>
+noremap <leader>pdb oimport pdb; pdb.set_trace()<ESC>
 
 "" nerd commenter
 " Add spaces after comment delimiters by default
@@ -61,8 +62,9 @@ let g:NERDDefaultAlign = 'left'
 let g:NERDAltDelims_java = 1
 
 " for finding files 
+nmap <leader>bf :CtrlP<cr>
 nmap <leader>bb :CtrlPBuffer<cr>
-nmap <leader>bs :CtrlPMRU<cr>
+nmap <leader>br :CtrlPMRU<cr>
 " run search everything
 nmap <leader>bm :CtrlPMixed<cr>
 
