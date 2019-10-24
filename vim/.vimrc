@@ -62,9 +62,9 @@ let g:NERDDefaultAlign = 'left'
 let g:NERDAltDelims_java = 1
 
 " for finding files 
-nmap <leader>bf :CtrlP<cr>
-nmap <leader>bb :CtrlPBuffer<cr>
-nmap <leader>br :CtrlPMRU<cr>
+nmap <leader>bb :CtrlP<cr>
+"nmap <leader>bb :CtrlPBuffer<cr>
+"nmap <leader>br :CtrlPMRU<cr>
 " run search everything
 nmap <leader>bm :CtrlPMixed<cr>
 
