@@ -49,7 +49,7 @@ set pastetoggle=<leader>p
 nnoremap <leader>v :vsplit<CR>
 
 " Print ipdb debug line
-noremap <leader>pdb oimport pdb; pdb.set_trace()<ESC>
+noremap <leader>db oimport pdb; pdb.set_trace()<ESC>
 
 "" nerd commenter
 " Add spaces after comment delimiters by default
@@ -63,7 +63,7 @@ let g:NERDAltDelims_java = 1
 
 " for finding files 
 nmap <leader>bb :CtrlP<cr>
-"nmap <leader>bb :CtrlPBuffer<cr>
+"nmap <leader>bf :CtrlPBuffer<cr>
 "nmap <leader>br :CtrlPMRU<cr>
 " run search everything
 nmap <leader>bm :CtrlPMixed<cr>
@@ -92,12 +92,15 @@ let g:buffergator_suppress_keymaps = 1
 " Looper buffers
 " Let g:buffergator_mru_cycle_loop = 1
 " Go to the previous buffer open
-nmap <leader>jj :BuffergatorMruCyclePrev<cr>
+nmap <leader>jj :bn<cr>
 " Go to the next buffer open
-nmap <leader>kk :BuffergatorMruCycleNext<cr>
+nmap <leader>kk :bp<cr>
 " View the entire list of buffers open
 nmap <leader>bl :BuffergatorOpen<cr>
 " Shared bindings from Solution #1 from earlier
 nmap <leader>t :enew<cr>
 " Close the current buffer and move to the previous one
 nmap <leader>bq :bp <BAR> bd #<cr>
+
+nmap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nmap  <silent> <S-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
