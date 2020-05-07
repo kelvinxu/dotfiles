@@ -31,6 +31,17 @@ imap jk <Esc>
 set background=dark
 colorscheme gruvbox
 
+" for those rare days that I work out in the sun :'(
+function ToggleColors()
+    if (g:colors_name == "PaperColor")
+        set background=dark
+        colorscheme gruvbox
+    else
+        set background=light
+        colorscheme PaperColor
+    endif
+endfunction
+
 "" NerdTREE
 "autocmd vimenter * NERDTree     " Automatically open NerdTree
 autocmd StdinReadPre * let s:std_in=1
